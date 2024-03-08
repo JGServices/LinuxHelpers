@@ -1,0 +1,12 @@
+These commands help you find the files you want.
+COMMAND	DESCRIPTION
+grep patt /path/to/src	Search for a text pattern patt in X. Commonly used with pipe e.g., ps aux | grep python3 filters out the processes containing python3 from all running processes of all users.
+grep -r patt /path/to/src	Search recursively (the target directory /path/to/src and its subdirectories) for a text pattern patt.
+grep -v patt X	Return lines in X not matching the specified patt.
+grep -l patt X	Write to standard output the names of files containing patt.
+grep -i patt X	Perform case-insensitive matching on X. Ignore the case of patt.
+find	Find files.
+find /path/to/src -name "*.sh"	Find all files in /path/to/src matching the pattern "*.sh" in the file name.
+find /home -size +100M	Find all files in the /home directory larger than 100MB.
+locate name	Find files and directories by name.
+sort X	Arrange lines of text in X alphabetically or numerically.
