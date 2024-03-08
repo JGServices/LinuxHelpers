@@ -1,0 +1,24 @@
+These commands are for unpacking compressed files (.zip, .gz, .bz2, .tar, etc.) with large or complex contents, such as programs.
+COMMAND	DESCRIPTION
+tar	Manipulate archives with .tar extension.
+tar -v	Get verbose output while manipulating TAR archives. May combine this option with others, e.g., tar -tvf.
+tar -cf archive.tar Y	Create a TAR archive named archive.tar containing Y.
+tar -xf archive.tar	Extract the TAR archive named archive.tar.
+tar -tf archive.tar	List contents of the TAR archive named archive.tar.
+tar -czf archive.tar.gz Y	Create a gzip-compressed TAR archive named archive.tar.gz containing Y.
+tar -xzf archive.tar.gz	Extract the gzip-compressed TAR archive named archive.tar.gz.
+tar -cjf archiave.tar.bz2 Y	Create a bzip2-compressed TAR archive named archive.tar.bz2 containing Y.
+tar -xjf archive.tar.bz2	Extract the bzip2-compressed TAR archive named archive.tar.bz2.
+gzip	Manipulate archives with .gz extension.
+gzip Y	Create a gzip archive named Y.gz containing Y.
+gzip -l Y.gz	List contents of gzip archive Y.gz.
+gzip -d Y.gz	Extract Y.gz and recover the original file Y.
+gunzip Y.gz	
+bzip2	Manipulate archives with .bz2 extension.
+bzip2 Y	Create a bzip2 archive named Y.bz2 containing Y.
+bzip2 -d Y.gz	Extract Y.bz2 and recover the original file Y.
+bunzip2 Y.gz	
+zip -r Z.zip Y	Zip Y to the ZIP archive Z.zip.
+unzip Z.zip	Unzip Z.zip to the current directory.
+unzip Z.zip	List contents of Z.zip.
+
