@@ -1,0 +1,20 @@
+These commands regulate how your Linux machine communicates with other computers, such as the local area network (LAN) router or external websites.
+
+COMMAND	DESCRIPTION
+ifconfig	Display all network interfaces with IP addresses
+ifconfig -a	Display all network interfaces, even if any of them is down, with IP addresses
+ifconfig eth0	Display IP addresses and details of the eth0 interface
+ip a	Another way to display all network interfaces with IP addresses
+ethtool eth0	Query or control network driver and hardware settings of the interface eth0
+netstat	Print open sockets of network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
+Pipe with the less command: e.g., netstat -a | less
+netstat -a	Show both listening and non-listening sockets
+netstat -l	Show only listening sockets
+netstat -nutlp	Show listening TCP and UDP ports and corresponding programs
+ping host	Send ICMP echo request to host, which may be a symbolic name, domain name or IP address
+whois domain	Display whois information for domain
+dig domain	Display DNS information for domain
+dig -x addr	Do a reverse lookup on an IPv4 or IPv6 address addr
+host domain	Display DNS IP address for domain
+wget LINK	Download from location LINK
+curl LINK	Display the HTML source of LINK. 
