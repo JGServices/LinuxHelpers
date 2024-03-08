@@ -1,0 +1,13 @@
+These commands provide storage details regarding your Linux machine.
+
+COMMAND	DESCRIPTION
+df	Display free disk space.
+du	Show file/folder sizes on disk.
+du -ah	Disk usage in human readable format (KB, MB etc.)
+du -sh	Total disk usage of the current directory
+du -h	Free and used space on mounted filesystems
+du -i	Free and used inodes on mounted filesystems
+fdisk -l	List disk partitions, sizes, and types
+free -h	Display free and used memory in human readable units.
+free -m	Display free and used memory in MB.
+free -g	Display free and used memory in GB.
