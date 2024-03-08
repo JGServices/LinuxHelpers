@@ -1,0 +1,13 @@
+These commands give information on the system’s users and allows superuser administrators to change user settings.
+
+COMMAND	DESCRIPTION
+who	Display who is logged in
+w	Display what users are online and what they are doing
+users	List current users
+whoami	Display what user you are logged in as
+id	Display the user ID and group IDs of your current user
+last	Display the last users who have logged onto the system
+groupadd gp1	Create a group named gp1
+useradd -c "Alice Bob" -m ab1	Create an account named ab1, with a comment of "Alice Bob" and create the new user’s home directory
+userdel ab1	Delete the account named ab1
+usermod -aG gp1 ab1	Add the account ab1 to the group gp1
