@@ -1,0 +1,24 @@
+These are helpful for logging program output and error messages.
+COMMAND	DESCRIPTION
+echo TEXT	Display a line of TEXT or the contents of a variable.
+echo -e TEXT	Also interprets escape characters in TEXT, e.g., \n → new line, \b → backslash, \t → tab.
+echo -n TEXT	Omits trailing newline of TEXT.
+cmd1 | cmd2	| is the pipe character; feeds the output of the command cmd1 and sends it to the command cmd2, e.g., ps aux | grep python3.
+cmd > file	Redirect output of a command cmd to a file file. Overwrites pre-existing content of file.
+cmd >& file	Redirect output of cmd to file. Overwrites pre-existing content of file. Suppresses the output of cmd.
+cmd > /dev/null	Suppress the output of cmd.
+cmd >> file	Append output of cmd to file.
+cmd < file	Read input of cmd from file.
+cmd << delim	Read input of cmd from the standard input with the delimiter character delim to tell the system where to terminate the input. Example for counting the number of lines of ad-hoc input:
+	wc -l << EOF
+	> I like
+	> apples
+	> and
+	> oranges.
+	> EOF      
+	 4
+	Hence there are only 4 lines in the standard input delimited by EOF.
+cmd <<< string	Input a text string to cmd.
+cmd 2> foo	Redirect error messages of cmd to foo.
+cmd 2>> foo	Append error messages of cmd to foo.
+cmd &> file	Redirect output and error messages of cmd to file.
