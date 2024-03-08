@@ -1,0 +1,51 @@
+In the following commands: X may refer to a single file, a string containing a wildcard symbol referring to a set of multiple files, e.g., file*.txt, or the stream output of a piped command (in which case the syntax would be X | command instead of command X); Y is a single directory; A and B are path strings of files/directories.
+COMMAND	DESCRIPTION
+*	Wildcard symbol for variable length, e.g., *.txt refers to all files with the TXT extension
+?	Wildcard symbol referring to a single character, e.g., Doc?.docx can refer to Doc1.docx, DocA.docx, etc.
+ls	List the names of files and subfolders in the current directory. Options include -l, -a, -t which you may combine, e.g., -alt.
+ls -l	Also show details of each item displayed, such as user permissions and the time/date when the item was last modified
+ls -a	Also display hidden files/folders. May be combined with ls -l to form ls -al.
+ls -t	Sort the files/folders according to the last modified time/date, starting with the most recently modified item
+ls X 	List the files 
+cd Y	Change directory to Y.
+	 
+	Special instances of Y:
+	.  — current directory
+	.. — parent directory
+cd	To the $HOME directory
+cd ..	Up one level to enclosing folder or parent directory
+cd /etc	To the /etc directory
+cmp A B	Compare two files A and B for sameness. No output if A and B are identical, outputs character and line number otherwise.
+diff A B	Compare two files A and B for differences. Outputs the difference.
+pwd	Display the path of the current working directory.
+mkdir X	Make a new directory named X inside the current directory.
+mv A B	Move a file from path A to path B. Also used for renaming files.
+	Examples:
+	- Moving between directories folder1 and folder2:
+	mv ./folder1/file.txt ./folder2
+	The file name will remain unchanged, and its new path will be ./folder2/file.txt.
+	- Renaming a file: mv new_doc.txt expenses.txt
+	The new file name is expenses.txt.
+cp A B	Copy a file from path A to path B. Usage similar to mv both in moving to a new directory and simultaneously renaming the file in its new location.
+	Example: cp ./f1/file.txt ./f2/expenses.txt simultaneously copies the file file.txt to the new location with a new name expenses.txt.
+cp -r Y Z	Recursively copy a directory Y and its contents to Z. If Z exists, copy source Y into it; otherwise, create Z and Y becomes its subdirectory with Y’s contents
+rm X	Remove (delete) X permanently.
+rm -r Y	Recursively delete a directory Y and its contents
+rm -f X	Forcibly remove file X without prompts or confirmation
+rm -rf Y	Forcibly remove directory Y and its contents recursively
+rmdir Y	Remove a directory Y permanently, provided Y is empty.
+open X	Open X in its default program.
+open -e X	Opens X in the default text editor (macOS: TextEdit)
+touch X	Create an empty file X or update the access and modification times of X.
+cat X	View contents of X.
+cat -b X	Also display line numbers as well.
+wc X	Display word count of X.
+head X	Display the first 10 lines of X. If more than a single file is specified, each file is preceded by a header consisting of the string "==> X <=='' where "X'' is the name of the file.
+head -n 4 X	Show the first 4 lines of X.
+ls *.c | head -n 5	Display the first 5 items of a list of *.c files in the current directory.
+tail X	Display the last (10, by default) lines of X. If more than a single file is specified, each file is preceded by a header consisting of the string "==> X <=='' where "X'' is the name of the file.
+tail -n +1 X	Display entire contents of the file(s) X specified, with header of respective file names
+tail -f X	Display the last 10 lines of the file(s) X specified, and track changes appended to them at the end. Overwriting X or modifying X with a text editor such as vim would mess up this command’s output.
+less	Read a file with forward and backward navigation. Often used with pipe, e.g., cat file.txt | less
+ln -s A S	Create symbolic link of path A to link name S.
+
