@@ -1,0 +1,6 @@
+The following table is on package management in popular Linux distributions.
+
+LINUX DISTRIBUTION	PACKAGE FILE EXTENSION	PACKAGE INSTALLER(S)
+Debian / Ubuntu	.deb	apt, dpkg
+Rocky / Fedora / Red Hat Enterprise Linux	.rpm	yum, dnf
+Arch Linux / Manjaro / Garuda / Chakra	.pkg, .pacman, .pkg.tar(.xz/.zst/.gz)	pacman
