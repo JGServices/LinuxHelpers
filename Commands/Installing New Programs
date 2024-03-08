@@ -1,0 +1,3 @@
+A package file is an archive containing compiled software and other resources it uses. The package file extension and the package installer (a utility for installing new programs) depend on the Linux distribution.
+
+Know your system’s Linux distribution to understand the correct installation commands tailored to it. If the package comes with a README component, it should contain application-specific installation instructions such as extracting TAR files
