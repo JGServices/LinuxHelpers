@@ -1,0 +1,14 @@
+These commands provide details about the hardware supporting your Linux machine.
+
+COMMAND	DESCRIPTION
+dmesg	Display messages in kernel ring buffer (data structure that records messages related to the operation of the program running the operating system)
+cat /proc/cpuinfo 	Display information about the central processing unit (CPU)
+cat /proc/meminfo	Display memory information
+lspci -tv	Displays information about each Peripheral Component Interconnect (PCI) device on your system.
+The option -t outputs the information as a tree diagram, and -v is for verbose output.
+lsusb -tv	Display information about Universal Serial Bus (USB) devices and the devices connected to them.
+The option -t outputs the information as a tree diagram, and -v is for verbose output.
+dmidecode	Display system hardware components, serial numbers, and BIOS version
+hdparm -i /dev/sda	Display information about the disk sda
+hdparm -tT /dev/sda	Perform a read speed test on the disk sda 
+badblocks -s /dev/sda	Test for unreadable blocks on the disk sda
