@@ -1,0 +1,31 @@
+The following is redolent of functions in Windows Task Manager, but on the command line.
+
+COMMAND	DESCRIPTION
+&	Add this character to the end of a command/process to run it in the background
+ps	Show process status. Often used with grep e.g., ps aux | grep python3 displays information on processes involving python3.
+
+Meaning of aux:
+a = show processes for all users
+u = show user or owner column in output
+x = show processes not attached to a terminal
+ps -e
+ps -A	Either of these two commands prints all running processes in the system
+ps -ef	Print detailed overview
+ps -U root -u root	Display all processes running under the account root.
+ps -eo pid,user,command	Display only the columns pid, user and command in ps output
+top	Display sorted information about processes
+htop	Display sorted information about processes with visual highlights. It allows you to scroll vertically and horizontally, so you can see every process running on your system and entire commands.
+atop	Display detailed information about processes and hardware
+kill PID	Kill a process specified by its process ID PID, which you obtain using the ps command
+killall proc1	Kill all processes containing proc1 in their names
+lsof	List all open files on the system. (This command helps you pinpoint what files and processes are preventing you from successfully ejecting an external drive.)
+lsof -u root	List all files on the system opened by the root user. As the output can be long, you may use lsof -u root | less to keep this list from taking up space in the terminal output.
+mpstat 1	Display processor-related statistics, updated every second (hence the 1, whereas mpstat 2 refreshes the output every 2 seconds)
+vmstat 1	Display virtual memory statistics (information about memory, system processes, paging, interrupts, block I/O, disk, and CPU scheduling), updated every (1) second
+iostat 1	Display system input/output statistics for devices and partitions. virtual memory statistics, updated every (1) second
+tail -n 100 /var/log/messages	Display the last 100 lines in the system logs.
+Replace /var/log/messages with /var/log/syslog for Debian-based systems.
+tcpdump -i eth0	Capture and display all packets on interface eth0
+tcpdump -i eth0 port 80	Monitor all traffic on interface eth0 port 80 (HTTP)
+watch df -h	Execute df -h and show periodic updates.
+To exit, press Ctrl+C.
