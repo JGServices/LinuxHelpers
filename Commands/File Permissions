@@ -1,0 +1,49 @@
+Not all files are equally accessible. To prevent unwanted tampering, some files on your device may be read-only.
+ 
+
+
+
+PERMISSION TYPE	SYMBOL	IF A FILE HAS THIS PERMISSION, YOU CAN:
+Read	r	Open and view file contents (cat, head, tail)
+Write	w	Edit, delete or rename file (vi)
+Execute	x	Execute the file
+None	-	Do nothing
+
+
+COMMAND	DESCRIPTION
+chmod permission foo	Change the permissions of a file or directory foo according to a permission in symbolic or octal notation format. Examples:
+chmod +x foo	Grant execute permissions to all users to foo using symbolic notation.
+chmod 777 foo	Grant read, write and execute permissions to all users to foo using octal notation.
+chown user2 foo	Change the owner of foo to user2.
+chgrp group2 foo	Change the group to which foo belongs to group2.
+umask	Get a four-digit subtrahend.
+	Recall in subtraction: minuend – subtrahend = difference
+	If the minuend is 777, the difference is your default directory permissions; if it’s 666, the difference is your default file permissions.
+su / sudo / sudo -i	Invoke superuser privileges.
+id	Find your user id and group id.
+groups	Find all groups to which you belong.
+
+
+Usage examples:
+chmod +x testfile → allow all users to execute the file
+chmod u-w testfile → forbid the current user from writing or changing the file
+chmod u+wx,g-x,o=rx testfile → simultaneously add write and execute permissions to user, remove execute permission from group, and set the permissions of other users to only read and write.
+
+Numeric Representation
+The table below compares Linux file permissions in octal form and in the format [u/g/o/a][+/-/=][r/w/x].
+
+
+OCTAL	PERMISSION(S)	EQUIVALENT TO APPLICATION OF
+0	No permissions	-rwx
+1	Execute permission only	 =x
+2	Write permission only	 =w
+3	Write and execute permissions only: 2 + 1 = 3	 =wx
+4	Read permission only	=r
+5	Read and execute permissions only: 4 + 1 = 5	 =rx
+6	Read and write permissions only: 4 + 2 = 6	 =rw
+7	All permissions: 4 + 2 + 1 = 7	 =rwx
+
+Examples
+chmod 777 testfile → allow all users to execute the file
+chmod 177 testfile → restrict current user (u) to execute-only, while the group (g) and other users (o) have read, write and execute permissions
+chmod 365 testfile → user (u) gets to write and execute only; group (g), read and write only; others (o), read and execute only.
