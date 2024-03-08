@@ -1,0 +1,20 @@
+These commands are for logging in to local and remote hosts, and for uploading and downloading files, transferring them between devices. Remember to omit the square brackets "[" and "]" when you input the optional parameters they enclose.
+COMMAND	DESCRIPTION
+ssh user@access	Connect to access as user.
+ssh access	Connect to access as your local username.
+ssh -p port user@access	Connect to access as user using port.
+scp [user1@]host1:[path1] [user2@]host2:[path2]	Login to hostN as userN via secure copy protocol for N=1,2.
+	 
+	Example usage:
+	scp alice@pi:/home/source bob@arduino:/destination
+	 
+	path1 and path2 may be local or remote, but ensure they’re absolute rather than relative paths, e.g., /var/www/*.html, /usr/bin.
+	 
+If user1 and user2 are not specified, scp will use your local username.
+scp -P port [user1@]host1:[path1] [user2@]host2:[path2] 	Connect to hostN as userN using port for N=1,2.
+scp -r [user1@]host1:[path1] [user2@]host2:[path2]	Recursively copy all files and directories from path1 to path2.
+sftp [user@]access	Login to access as user via secure file transfer protocol. If user is not specified, your local username will be used.
+sftp access	Connect to access as your local username.
+sftp -P port user@access	Connect to access as user using port.
+rsync -a [path1] [path2]	Synchronize [path1] to [path2], preserving symbolic links, attributes, permissions, ownerships, and other settings.
+rsync -avz host1:[path1] [path2]	Synchronize [path1] on the remote host host1 to the local path [path2], preserving symbolic links, attributes, permissions, ownerships, and other settings. It also compresses the data involved during the transfer.
