@@ -1,0 +1,7 @@
+sudo apt install tasksel
+
+ sudo tasksel install ubuntu-desktop
+OR
+ sudo tasksel 
+Then Select Desktop Bits
+
