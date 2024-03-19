@@ -5,3 +5,5 @@ HandleLidSwitch=ignore
 service systemd-logind restart
 
 apt-get install gnome-tweaks
+
+sudo systemctl set-default multi-user
