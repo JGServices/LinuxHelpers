@@ -5,3 +5,12 @@ OR
  sudo tasksel 
 Then Select Desktop Bits
 
+
+yum grouplist
+
+-h, --help: Displays the help message and exits.
+--all: Displays all available and installed package groups.
+--available: Displays all available package groups.
+--installed: Displays all installed package groups.
+--group-info <group name>: Displays detailed information about a particular group.
+--id <group ID>: Displays the packages in a particular group by ID.
